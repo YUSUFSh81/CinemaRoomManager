@@ -24,8 +24,7 @@ public class cinema {
         int choice;
 
         do {
-            //int rowNumber = scanner.nextInt();
-            //int seatNumber = scanner.nextInt();
+            
             System.out.println();
             System.out.println("1. Show the seats");
             System.out.println("2. Buy a ticket");
@@ -39,7 +38,6 @@ public class cinema {
                     break;
                 case 2:
                     buyATicket();
-                    //updatedSeats(seats, rowNumber, seatNumber);
                     break;
                 case 3:
                     showStats();
@@ -108,14 +106,7 @@ public class cinema {
         if (rowNumber == 0 && seatNumber == 0) {
             count = 0;
         }
-        /*
-        else if (seats[rowNumber - 1][seatNumber - 1].equals("B")) {
-            count += 1;
-        }
-
-         */
-
-
+        
         System.out.println();
         System.out.printf("Number of purchased tickets: %d %n", count);
         double percent = ( (double) count / (numOfRows * numOfSeats)) * 100;
@@ -139,7 +130,7 @@ public class cinema {
             System.out.println("Wrong input!");
         } else {
             System.out.println();
-            //ticketPrice = 0;
+            
 
             if ((numOfRows * numOfSeats) < 60) {
                 ticketPrice = 10;
@@ -181,43 +172,7 @@ public class cinema {
 
         }
 
-
-        //seats[(rowNumber - 1)][(seatNumber - 1)] = "B";
-
-
-        //return ticketPrice;
-        //System.out.println();
-
     }
 
-        /*
-        System.out.println("Cinema: ");
-
-        for (int i = 0; i < numOfRows; i++) {
-            for (int j = 0; j < seats[i].length; j++) {
-                seats[i][j] = "S";
-            }
-        }
-
-        num = 1;
-        for (int i = 0; i <= seats[0].length; i++) {
-            if (i == 0) {
-                System.out.print("  ");
-                continue;
-            }
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        for (int i = 0; i < numOfRows; i++) {
-            System.out.print(num + " ");
-            num++;
-            for (int j = 0; j < seats[i].length; j++) {
-                seats[i][j] = "S";
-                seats[(rowNumber - 1)][(seatNumber - 1)] = "B";
-                System.out.print(seats[i][j] + " ");
-            }
-            System.out.println();
-        }
-        */
 }
 
